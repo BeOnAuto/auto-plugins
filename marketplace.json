@@ -1,0 +1,26 @@
+{
+  "name": "beon-auto",
+  "owner": {
+    "name": "BeOnAuto"
+  },
+  "plugins": [
+    {
+      "name": "claude-auto",
+      "description": "Husky-style hooks and skills management for Claude Code",
+      "version": "0.18.0",
+      "author": {
+        "name": "Sam Hatoum"
+      },
+      "source": { "source": "github", "repo": "BeOnAuto/claude-auto" }
+    },
+    {
+      "name": "auto-agent",
+      "description": "Connect your coding agent to Auto",
+      "version": "0.1.0",
+      "author": {
+        "name": "BeOnAuto"
+      },
+      "source": { "source": "github", "repo": "BeOnAuto/auto-agent" }
+    }
+  ]
+}
