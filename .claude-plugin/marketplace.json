@@ -11,16 +11,22 @@
       "author": {
         "name": "Sam Hatoum"
       },
-      "source": { "source": "github", "repo": "BeOnAuto/claude-auto" }
+      "source": {
+        "source": "github",
+        "repo": "BeOnAuto/claude-auto"
+      }
     },
     {
       "name": "auto-agent",
       "description": "Connect your coding agent to Auto",
-      "version": "0.2.0",
+      "version": "0.3.0",
       "author": {
         "name": "BeOnAuto"
       },
-      "source": { "source": "github", "repo": "BeOnAuto/auto-agent" }
+      "source": {
+        "source": "github",
+        "repo": "BeOnAuto/auto-agent"
+      }
     }
   ]
 }
