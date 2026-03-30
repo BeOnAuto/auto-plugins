@@ -1,0 +1,56 @@
+name: Update Marketplace
+
+on:
+  repository_dispatch:
+    types: [plugin-release]
+  workflow_dispatch:
+    inputs:
+      plugin_name:
+        description: 'Plugin name (e.g. auto-agent, claude-auto)'
+        required: true
+      plugin_version:
+        description: 'New version (e.g. 0.2.0)'
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set variables
+        id: vars
+        run: |
+          if [ "${{ github.event_name }}" = "repository_dispatch" ]; then
+            echo "name=${{ github.event.client_payload.plugin_name }}" >> $GITHUB_OUTPUT
+            echo "version=${{ github.event.client_payload.plugin_version }}" >> $GITHUB_OUTPUT
+          else
+            echo "name=${{ inputs.plugin_name }}" >> $GITHUB_OUTPUT
+            echo "version=${{ inputs.plugin_version }}" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Update marketplace.json
+        run: |
+          PLUGIN_NAME="${{ steps.vars.outputs.name }}"
+          PLUGIN_VERSION="${{ steps.vars.outputs.version }}"
+          echo "Updating ${PLUGIN_NAME} to ${PLUGIN_VERSION}"
+
+          # Update the version for the matching plugin
+          jq --arg name "$PLUGIN_NAME" --arg version "$PLUGIN_VERSION" \
+            '(.plugins[] | select(.name == $name)).version = $version' \
+            .claude-plugin/marketplace.json > tmp.json && mv tmp.json .claude-plugin/marketplace.json
+
+          cat .claude-plugin/marketplace.json
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add .claude-plugin/marketplace.json
+          git diff --cached --quiet && echo "No changes" && exit 0
+          git commit -m "chore: update ${{ steps.vars.outputs.name }} to ${{ steps.vars.outputs.version }}"
+          git push
