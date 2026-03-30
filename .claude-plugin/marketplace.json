@@ -13,7 +13,8 @@
       },
       "source": {
         "source": "github",
-        "repo": "BeOnAuto/claude-auto"
+        "repo": "BeOnAuto/claude-auto",
+        "ref": "main"
       }
     },
     {
@@ -25,7 +26,8 @@
       },
       "source": {
         "source": "github",
-        "repo": "BeOnAuto/auto-agent"
+        "repo": "BeOnAuto/auto-agent",
+        "ref": "main"
       }
     }
   ]
