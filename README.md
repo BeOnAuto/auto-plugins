@@ -10,8 +10,8 @@ This repository bundles two plugins:
 
 | Plugin | What it does |
 |--------|-------------|
-| **[auto-agent](../auto-agent/)** | Connects your coding agent to an Auto workspace — syncs the narrative model, scaffolds dev servers, and builds application code from structured specs |
-| **[claude-auto](../claude-auto/)** | Husky-style hooks for Claude Code — commit validators, context-injection reminders, deny-lists, auto-continue, and TCR discipline |
+| **[auto-agent](https://github.com/beOnAuto/auto-agent)** | Connects your coding agent to an Auto workspace — syncs the narrative model, scaffolds dev servers, and builds application code from structured specs |
+| **[claude-auto](https://claude.on.auto/)** | Husky-style hooks for Claude Code — commit validators, context-injection reminders, deny-lists, auto-continue, and TCR discipline |
 
 ## Install
 
