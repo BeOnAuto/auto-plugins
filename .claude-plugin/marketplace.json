@@ -20,7 +20,7 @@
     {
       "name": "auto-agent",
       "description": "Connect your coding agent to Auto",
-      "version": "0.8.1",
+      "version": "0.9.0",
       "author": {
         "name": "BeOnAuto"
       },
