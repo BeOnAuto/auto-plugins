@@ -5,7 +5,7 @@
   },
   "plugins": [
     {
-      "name": "auto-ketchup",
+      "name": "ketchup",
       "description": "A quality loop for Claude Code. Validators, reminders, deny-lists, TCR. Stop babysitting, start parallelizing.",
       "version": "0.21.0",
       "author": {
@@ -13,7 +13,7 @@
       },
       "source": {
         "source": "github",
-        "repo": "BeOnAuto/auto-ketchup",
+        "repo": "BeOnAuto/ketchup",
         "ref": "main"
       }
     },

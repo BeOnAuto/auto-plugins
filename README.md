@@ -11,7 +11,7 @@ This repository bundles two plugins:
 | Plugin | What it does |
 |--------|-------------|
 | **[auto-agent](https://github.com/beOnAuto/auto-agent)** | Connects your coding agent to an Auto workspace. Syncs the narrative model, scaffolds dev servers, and builds application code from structured specs. |
-| **[auto-ketchup](https://ketchup.on.auto/)** | A quality loop for Claude Code. Validators gate every commit, reminders inject your guidelines, deny-lists protect files, auto-continue keeps the agent working. Stop babysitting, start parallelizing. |
+| **[ketchup](https://ketchup.on.auto/)** | LLM-powered guardrails for Claude Code. Turn every AI mistake into a rule AI can't repeat. 17 validators ship by default; bad commits don't land. |
 
 ## Install
 
@@ -20,7 +20,7 @@ Inside a Claude Code session:
 ```
 /plugin marketplace add BeOnAuto/auto-plugins
 /plugin install auto-agent
-/plugin install auto-ketchup
+/plugin install ketchup
 /reload-plugins
 ```
 
@@ -43,21 +43,21 @@ Bridges your coding agent to the [Auto](https://on.auto) platform. Model your so
 /auto-agent:build
 ```
 
-### auto-ketchup
+### ketchup
 
-Installs a quality loop into Claude Code so you can trust your agent and run multiple sessions in parallel.
+Runs LLM-powered guardrails on every AI commit so bad commits don't land. The pattern: observe an AI mistake, encode it as a rule, AI can't repeat it.
 
-- Validates every commit against configurable rules (17 built-in validators)
-- Injects context reminders at the right hook points
-- Protects files via deny-list glob patterns
-- Auto-continues the agent until the plan is done
-- Enforces TCR (Test && Commit || Revert) discipline
+- 17 LLM validators ship by default; add your own in `.ketchup/validators/`
+- Reminders re-inject your operating context every session and every prompt
+- Deny-list gives structural protection for files AI must never touch
+- Auto-continue reads `ketchup-plan.md` and keeps the agent working when commits stay clean
+- TCR gate: red commits don't land
 
 ```
-/auto-ketchup-config show
+/ketchup:config show
 ```
 
-> Auto gives you the spec. Ketchup gives you the discipline to execute against it without babysitting.
+> Auto gives you the spec. Ketchup gives you the discipline to execute against it.
 
 ## Part of the ecosystem
 
