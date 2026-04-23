@@ -61,9 +61,9 @@ Installs a quality loop into Claude Code so you can trust your agent and run mul
 
 ## Part of the ecosystem
 
-- **[on.auto](https://on.auto)** — model your software as narratives
-- **[narrativedriven.org](https://narrativedriven.org)** — the spec dialect behind Auto
-- **[specdriven.com](https://specdriven.com)** — why specifications matter for AI-native development
+- **[on.auto](https://on.auto)**: model your software as narratives
+- **[narrativedriven.org](https://narrativedriven.org)**: the spec dialect behind Auto
+- **[specdriven.com](https://specdriven.com)**: why specifications matter for AI-native development
 
 ## Community
 
