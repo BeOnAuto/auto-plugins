@@ -10,8 +10,8 @@ This repository bundles two plugins:
 
 | Plugin | What it does |
 |--------|-------------|
-| **[auto-agent](https://github.com/beOnAuto/auto-agent)** | Connects your coding agent to an Auto workspace — syncs the narrative model, scaffolds dev servers, and builds application code from structured specs |
-| **[claude-auto](https://claude.on.auto/)** | Husky-style hooks for Claude Code — commit validators, context-injection reminders, deny-lists, auto-continue, and TCR discipline |
+| **[auto-agent](https://github.com/beOnAuto/auto-agent)** | Connects your coding agent to an Auto workspace. Syncs the narrative model, scaffolds dev servers, and builds application code from structured specs. |
+| **[auto-ketchup](https://ketchup.on.auto/)** | A quality loop for Claude Code. Validators gate every commit, reminders inject your guidelines, deny-lists protect files, auto-continue keeps the agent working. Stop babysitting, start parallelizing. |
 
 ## Install
 
@@ -20,11 +20,11 @@ Inside a Claude Code session:
 ```
 /plugin marketplace add BeOnAuto/auto-plugins
 /plugin install auto-agent
-/plugin install claude-auto
+/plugin install auto-ketchup
 /reload-plugins
 ```
 
-Install either or both — they work independently.
+Install either or both. They work independently.
 
 ## What each plugin does
 
@@ -43,7 +43,7 @@ Bridges your coding agent to the [Auto](https://on.auto) platform. Model your so
 /auto-agent:build
 ```
 
-### claude-auto
+### auto-ketchup
 
 Installs a quality loop into Claude Code so you can trust your agent and run multiple sessions in parallel.
 
@@ -54,8 +54,10 @@ Installs a quality loop into Claude Code so you can trust your agent and run mul
 - Enforces TCR (Test && Commit || Revert) discipline
 
 ```
-/claude-auto:config show
+/auto-ketchup-config show
 ```
+
+> Auto gives you the spec. Ketchup gives you the discipline to execute against it without babysitting.
 
 ## Part of the ecosystem
 

@@ -5,15 +5,15 @@
   },
   "plugins": [
     {
-      "name": "claude-auto",
-      "description": "Husky-style hooks and skills management for Claude Code",
+      "name": "auto-ketchup",
+      "description": "A quality loop for Claude Code. Validators, reminders, deny-lists, TCR. Stop babysitting, start parallelizing.",
       "version": "0.21.0",
       "author": {
         "name": "Sam Hatoum"
       },
       "source": {
         "source": "github",
-        "repo": "BeOnAuto/claude-auto",
+        "repo": "BeOnAuto/auto-ketchup",
         "ref": "main"
       }
     },
