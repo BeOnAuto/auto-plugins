@@ -1,12 +1,12 @@
 {
-  "name": "beon-auto",
+  "name": "BeOnAuto",
   "owner": {
     "name": "BeOnAuto"
   },
   "plugins": [
     {
       "name": "ketchup",
-      "description": "A quality loop for Claude Code. Validators, reminders, deny-lists, TCR. Stop babysitting, start parallelizing.",
+      "description": "LLM-powered guardrails for Claude Code. Turn every AI mistake into a rule AI can't repeat.",
       "version": "0.21.0",
       "author": {
         "name": "Sam Hatoum"
