@@ -5,7 +5,7 @@
   },
   "plugins": [
     {
-      "name": "Ketchup by Auto",
+      "name": "ketchup",
       "description": "LLM-powered guardrails for Claude Code. Turn every AI mistake into a rule AI can't repeat.",
       "author": {
         "name": "Sam Hatoum"
@@ -17,7 +17,7 @@
       }
     },
     {
-      "name": "Auto Agent",
+      "name": "auto-agent",
       "description": "Connect your coding agent to Auto",
       "author": {
         "name": "BeOnAuto"
